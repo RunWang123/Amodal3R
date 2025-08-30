@@ -28,10 +28,9 @@ This code has been tested on Ubuntu 22.02 with torch 2.4.0 & CUDA 11.8. We since
 
 Create a new conda environment named `amodal3r` and install the dependencies:
 ```sh
-python=3.10
-pytorch=2.4.0
-gcc=11
-cuda=11.8
+conda create -n amodal3r python=3.10
+conda activate amodal3r
+conda install pytorch==2.4.0 torchvision==0.19.0 pytorch-cuda=11.8 -c pytorch -c nvidia
 . ./setup.sh --new-env --basic --xformers --flash-attn --diffoctreerast --spconv --mipgaussian --kaolin --nvdiffrast
 ```
 The detailed usage of `setup.sh` can be found by running `. ./setup.sh --help`.
